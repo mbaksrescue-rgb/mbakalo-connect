@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { AlertTriangle, Users, Briefcase, MessageCircle, Shield, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
-import heroImage from "@/assets/hero-rescue.jpg";
+import heroImage from "@/assets/hero-community.jpg";
 import emergencyIcon from "@/assets/emergency-icon.png";
 import communityIcon from "@/assets/community-icon.png";
 import businessIcon from "@/assets/business-icon.png";
@@ -45,50 +45,52 @@ const Home = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-primary/5 via-background to-accent/5">
-        <div className="container py-12 md:py-24">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6 animate-in fade-in slide-in-from-left duration-500">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium">
-                <Shield className="h-4 w-4" />
-                Serving Mbakalo Ward
-              </div>
-              
-              <h1 className="text-4xl md:text-6xl font-bold leading-tight">
-                Your Community
-                <span className="block bg-gradient-to-r from-primary via-primary-hover to-accent bg-clip-text text-transparent">
-                  Safety First
-                </span>
-              </h1>
-              
-              <p className="text-xl text-muted-foreground max-w-xl">
-                Connecting neighbors, coordinating emergencies, and building a stronger Mbakalo community together.
-              </p>
+      <section className="relative overflow-hidden min-h-[600px] md:min-h-[700px] flex items-center">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <img
+            src={heroImage}
+            alt="Mbakalo community playing football"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-background/60 via-background/40 to-background/60" />
+        </div>
 
-              <div className="flex flex-wrap gap-4">
-                <Link to="/alerts">
-                  <Button size="lg" className="gap-2 bg-gradient-to-r from-primary to-primary-hover hover:opacity-90 transition-opacity">
-                    <AlertTriangle className="h-5 w-5" />
-                    Report Emergency
-                  </Button>
-                </Link>
-                <Link to="/community">
-                  <Button size="lg" variant="outline" className="gap-2">
-                    <MessageCircle className="h-5 w-5" />
-                    View News Feed
-                  </Button>
-                </Link>
-              </div>
-            </div>
+        {/* Content */}
+        <div className="container relative z-10 py-12 md:py-24">
+          <div className="max-w-3xl">
+            <div className="backdrop-blur-md bg-background/30 rounded-3xl p-8 md:p-12 border border-primary/20 shadow-2xl">
+              <div className="space-y-6 animate-in fade-in slide-in-from-left duration-500">
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/20 backdrop-blur-sm text-primary text-sm font-medium border border-primary/30">
+                  <Shield className="h-4 w-4" />
+                  Serving Mbakalo Ward
+                </div>
+                
+                <h1 className="text-4xl md:text-6xl font-bold leading-tight text-foreground">
+                  Your Community
+                  <span className="block bg-gradient-to-r from-primary via-primary-hover to-accent bg-clip-text text-transparent">
+                    Safety First
+                  </span>
+                </h1>
+                
+                <p className="text-xl text-foreground/90 max-w-xl">
+                  Connecting neighbors, coordinating emergencies, and building a stronger Mbakalo community together.
+                </p>
 
-            <div className="relative animate-in fade-in slide-in-from-right duration-700">
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-                <img
-                  src={heroImage}
-                  alt="Mbakalo Rescue Team in action"
-                  className="w-full h-auto object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/20 to-transparent" />
+                <div className="flex flex-wrap gap-4">
+                  <Link to="/alerts">
+                    <Button size="lg" className="gap-2 bg-gradient-to-r from-primary to-primary-hover hover:opacity-90 transition-opacity shadow-lg">
+                      <AlertTriangle className="h-5 w-5" />
+                      Report Emergency
+                    </Button>
+                  </Link>
+                  <Link to="/community">
+                    <Button size="lg" variant="outline" className="gap-2 backdrop-blur-sm bg-background/50 border-primary/30 hover:bg-background/70">
+                      <MessageCircle className="h-5 w-5" />
+                      View News Feed
+                    </Button>
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
