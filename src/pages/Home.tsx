@@ -53,45 +53,41 @@ const Home = () => {
             alt="Mbakalo community playing football"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-background/60 via-background/40 to-background/60" />
+          <div className="absolute inset-0 bg-gradient-to-br from-background/85 via-background/75 to-background/85" />
         </div>
 
         {/* Content */}
         <div className="container relative z-10 py-12 md:py-24">
-          <div className="max-w-3xl">
-            <div className="backdrop-blur-md bg-background/30 rounded-3xl p-8 md:p-12 border border-primary/20 shadow-2xl">
-              <div className="space-y-6 animate-in fade-in slide-in-from-left duration-500">
-                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/20 backdrop-blur-sm text-primary text-sm font-medium border border-primary/30">
-                  <Shield className="h-4 w-4" />
-                  Serving Mbakalo Ward
-                </div>
-                
-                <h1 className="text-4xl md:text-6xl font-bold leading-tight text-foreground">
-                  Your Community
-                  <span className="block bg-gradient-to-r from-primary via-primary-hover to-accent bg-clip-text text-transparent">
-                    Safety First
-                  </span>
-                </h1>
-                
-                <p className="text-xl text-foreground/90 max-w-xl">
-                  Connecting neighbors, coordinating emergencies, and building a stronger Mbakalo community together.
-                </p>
+          <div className="max-w-3xl space-y-6 animate-in fade-in slide-in-from-left duration-500">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/90 text-primary-foreground text-sm font-medium shadow-lg">
+              <Shield className="h-4 w-4" />
+              Serving Mbakalo Ward
+            </div>
+            
+            <h1 className="text-5xl md:text-7xl font-bold leading-tight text-foreground drop-shadow-lg">
+              Your Community
+              <span className="block bg-gradient-to-r from-primary via-primary-hover to-accent bg-clip-text text-transparent">
+                Safety First
+              </span>
+            </h1>
+            
+            <p className="text-xl md:text-2xl text-foreground font-medium max-w-xl drop-shadow-md">
+              Connecting neighbors, coordinating emergencies, and building a stronger Mbakalo community together.
+            </p>
 
-                <div className="flex flex-wrap gap-4">
-                  <Link to="/alerts">
-                    <Button size="lg" className="gap-2 bg-gradient-to-r from-primary to-primary-hover hover:opacity-90 transition-opacity shadow-lg">
-                      <AlertTriangle className="h-5 w-5" />
-                      Report Emergency
-                    </Button>
-                  </Link>
-                  <Link to="/community">
-                    <Button size="lg" variant="outline" className="gap-2 backdrop-blur-sm bg-background/50 border-primary/30 hover:bg-background/70">
-                      <MessageCircle className="h-5 w-5" />
-                      View News Feed
-                    </Button>
-                  </Link>
-                </div>
-              </div>
+            <div className="flex flex-wrap gap-4 pt-4">
+              <Link to="/alerts">
+                <Button size="lg" className="gap-2 bg-gradient-to-r from-primary to-primary-hover hover:opacity-90 transition-opacity shadow-xl text-lg px-8">
+                  <AlertTriangle className="h-5 w-5" />
+                  Report Emergency
+                </Button>
+              </Link>
+              <Link to="/community">
+                <Button size="lg" variant="outline" className="gap-2 bg-background/90 backdrop-blur-sm border-2 border-primary hover:bg-background shadow-xl text-lg px-8">
+                  <MessageCircle className="h-5 w-5" />
+                  View News Feed
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
