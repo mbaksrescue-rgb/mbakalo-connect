@@ -38,10 +38,10 @@ const Navigation = () => {
           })}
         </div>
 
-        <Link to="/auth">
-          <Button variant="outline" className="gap-2 bg-background/80">
+        <Link to="/profile">
+          <Button variant="ghost" className="gap-2">
             <User className="h-4 w-4" />
-            <span className="hidden sm:inline">Sign In</span>
+            <span className="hidden sm:inline">Profile</span>
           </Button>
         </Link>
       </div>
