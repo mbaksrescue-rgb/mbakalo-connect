@@ -39,7 +39,7 @@ const Navigation = () => {
         </div>
 
         <Link to="/auth">
-          <Button variant="outline" className="gap-2">
+          <Button variant="outline" className="gap-2 bg-background/80">
             <User className="h-4 w-4" />
             <span className="hidden sm:inline">Sign In</span>
           </Button>
