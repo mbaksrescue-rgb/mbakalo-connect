@@ -1,6 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "./ui/button";
-import { Home, AlertTriangle, Briefcase, MessageSquare, Shield, User } from "lucide-react";
+import { Home, AlertTriangle, Briefcase, MessageSquare, User } from "lucide-react";
+import logo from "@/assets/logo.jpg";
 
 const Navigation = () => {
   const location = useLocation();
@@ -16,10 +17,7 @@ const Navigation = () => {
     <nav className="sticky top-0 z-50 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between">
         <Link to="/" className="flex items-center space-x-2">
-          <Shield className="h-8 w-8 text-primary" />
-          <span className="font-bold text-xl bg-gradient-to-r from-primary to-primary-hover bg-clip-text text-transparent">
-            Mbakalo Rescue
-          </span>
+          <img src={logo} alt="MWRT Tunakujali - Mbakalo Ward Rescue Team" className="h-12 w-auto" />
         </Link>
 
         <div className="hidden md:flex items-center space-x-1">
